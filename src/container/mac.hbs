@@ -1,0 +1,103 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <h2>{{name}}</h2>
+
+    <h2>{{description}}
+        <br>
+        {{price}}
+        <br>
+        {{category}}
+    </h2>
+    <h3>Processor: </h3>{{#with features}}
+    Brand: {{processor/brand}}
+    <br>
+    Model: {{processor/model}}
+    <br>
+    Speed: {{processor/speed}}
+    <br>
+    Cores: {{processor/cores}}
+    <br>
+    Cache: {{processor/cache}}
+    <br>
+    <h4>Memory:</h4>
+    {{memory/type}}
+    <br>
+    {{memory/size}}
+    <br>
+    {{memory/speed}}
+    <br>
+    <h4>Storage:</h4>
+    {{storage/type}}
+    <br>
+    {{storage/size}}
+    <br>
+    <h4>Display</h4>
+    {{display/size}}
+    <br>
+    {{display/resolution}}
+    <br>
+    {{display/technology}}
+    <br>
+    {{display/color_space}}
+    <br>
+    {{display/brightness}}
+    <br>
+    {{display/refresh_rate}}
+    <br>
+    <h4>Graphics:</h4>
+    {{graphics/brand}}
+    <br>
+    {{graphics/model}}
+    <br>
+    {{graphics/memory}}
+    <br>
+    <h4>Ports:</h4>
+    <ul>
+        {{#each ports}}
+        <li>{{type}}</li>
+        <br>
+        <li>{{count}}</li>
+        <ul>
+            {{#each features}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+
+        <br>
+
+        {{/each}}
+    </ul>
+    <h4>Battery:</h4>
+    {{battery/type}}
+    <br>
+    {{battery/capacity}}
+    <br>
+    {{battery/life}}
+    <br>
+    {{weight}}
+    <h4>Dimensions</h4>
+    {{dimensions/height}}
+    <br>
+    {{dimensions/width}}
+    <br>
+    {{dimensions/depth}}
+    <br>
+    {{operating_system}}
+    <br>
+    <h4>Accessories:</h4>
+    <ul>
+        {{#each accessories}}
+        <hr>
+        <li>{{name}}</li>
+        <li>{{price}}</li>
+        {{/each}}
+    </ul>
+
+    {{/with}}
+</div>
