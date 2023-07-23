@@ -1,0 +1,76 @@
+<main>
+
+    {{#with page_header}}
+    <h1 class="text-center">{{title}}</h1>
+    <p class="text-center text-uppercase">{{description}}</p>
+    {{/with}}
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with section/about_us}}
+            <div class="display-6 text-end">{{title_list/main}}</div>
+            <br>
+            <h2 class="text-end">{{title_list/sub}}</h2>
+            <br>
+            <a href="#" class="btn btn-outline-info">
+                {{button/text}}
+            </a>
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with section/advantage}}
+            <div class="display-5 text-muted">{{title}}</div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="display-4 text-muted">{{efficiency/title}}</div>
+                    <br>
+                    <h6>{{efficiency/sub_title}}</h6>
+                    <br>
+                    <p>{{efficiency/description}}</p>
+                    <br>
+                    <a href="#" class="btn btn-outline-warning">
+                        {{efficiency/button}}
+                    </a>
+
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="display-4 text-muted text-center">{{innovation/title}}</div>
+                    <br>
+                    <h6 class="text-center">{{innovation/sub_title}}</h6>
+                    <br>
+                    <p class="text-center">{{innovation/description}}</p>
+                    <br>
+                    <a href="#" class="btn btn-outline-warning">
+                        {{innovation/button}}
+                    </a>
+
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="display-4 text-muted text-end">{{collaboration/title}}</div>
+                    <br>
+                    <h6 class="text-end">{{collaboration/sub_title}}</h6>
+                    <br>
+                    <p class="text-end">{{collaboration/description}}</p>
+                    <br>
+                    <a href="#" class="btn btn-outline-warning">
+                        {{collaboration/button}}
+                    </a>
+
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+
+
+</main>
