@@ -1,0 +1,76 @@
+<main>
+    {{#with navigation}}
+    <section class="col-12 row g-4">
+        <table class="table">
+            <thead>
+
+                <tr>
+
+                    {{#each links}}
+
+                    <th>
+                        <button href="{{href}}" class="btn btn-link">{{text}}</button>
+                    </th>
+
+
+                    {{/each}}
+
+                    <th><button class="btn btn-primary" href="{{button/href}}">{{button/text}}</button></th>
+
+                </tr>
+
+            </thead>
+        </table>
+    </section>
+    {{/with}}
+
+    <section>
+
+
+        {{#with header}}
+        <h1>{{title}}</h1>
+        <br>
+        <p>{{description}}</p>
+        <br>
+        <a href="{{button/link}}" class="btn btn-primary">{{button/text}}</a>
+
+        {{/with}}
+    </section>
+
+    <br>
+    <br>
+    <hr>
+
+    {{#with city}}
+    <h2>{{title}}</h2>
+    <br>
+    <section col-12>
+        {{#each cards}}
+        <div class="row g-6">
+            <div class="card text-bg-wite">
+                <div class="col-6">
+
+                    <img class="card-img-top" src="{{picture/src}}" alt="{{picture/alt}}">
+                    <div class="card-body" class="card-title text-bg-primary">
+                        <br>
+                        <div class="card-title">
+                            <h5>{{title}}</h5>
+                        </div>
+                        <br>
+                        <p>{{description}}</p>
+                        <a href="{{button/href}}" class="btn btn-primary">{{button/text}}</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+        </div>
+        {{/each}}
+    </section>
+    {{/with}}
+
+</main>
